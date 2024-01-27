@@ -18,7 +18,7 @@ body {
 }
 /**player**/
 .player {
-  background: linear-gradient(to right, #215f00, #e4e4d9);
+  background: linear-gradient(to right, #000000, #0f9b0f);
   position: sticky;
   top: 0;
   padding: 20px;
@@ -39,7 +39,7 @@ body {
 }
 .player .buttons {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .buttons .icons {
   width: 60px;
@@ -50,6 +50,7 @@ body {
   place-items: center;
   font-size: 20px;
   color: #215f00;
+  cursor: pointer;
 }
 .surahs > div {
   color: black;
@@ -79,4 +80,19 @@ body {
   text-align: center;
   transition: inherit;
   box-shadow: inherit;
+}
+
+.surahs > div::before {
+  content: "";
+  position: absolute;
+  border: 7px solid transparent;
+  border-right-color: #215f00;
+  top: 40%;
+  transform: translate(-50%);
+  left: -7px;
+}
+.surahs > div:hover,
+.surahs > div:hover::after {
+  background: linear-gradient(to bottom, #000000, #0f9b0f);
+  color: white;
 }
